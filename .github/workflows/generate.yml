@@ -2,7 +2,7 @@ name: Generate Calendar ICS
 
 on:
   schedule:
-    # 北京时间凌晨2点 = UTC 18:00
+    # 鍖椾含鏃堕棿鍑屾櫒2鐐?= UTC 18:00
     - cron: '0 18 * * *'
   workflow_dispatch:
 
