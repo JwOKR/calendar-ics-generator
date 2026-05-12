@@ -350,8 +350,11 @@ function generateIndex() {
 </body>
 </html>`;
   
-  fs.writeFileSync(outputPath, html, 'utf8');
-  console.log(`✅ index.html 已生成: ${outputPath}`);
+  // 使用函数内部的 outputDir 构建路径
+  const outputDir2 = path.join(__dirname, '..', 'output');
+  const outputPath2 = path.join(outputDir2, 'index.html');
+  fs.writeFileSync(outputPath2, html, 'utf8');
+  console.log(`✅ index.html 已生成: ${outputPath2}`);
 }
 
 module.exports = { generateIndex };
