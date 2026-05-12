@@ -57,6 +57,9 @@ jobs:
           name: ics-files
           path: output/
 
+      - name: Disable Jekyll (skip HTML processing)
+        run: touch output/.nojekyll
+
       - name: Enable GitHub Pages
         run: |
           curl -L -X PUT \
