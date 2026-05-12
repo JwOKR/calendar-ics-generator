@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const dayjs = require('dayjs');
 
-const outputDir = process.argv[2] || 'output';
+const outputDir = 'output';
 const repoOwner = process.argv[3] || process.env.GITHUB_REPOSITORY_OWNER || 'unknown';
 const repoName = process.argv[4] || process.env.GITHUB_REPOSITORY_NAME || 'calendar-subscription-tool';
 const timestamp = process.argv[5] || new Date().toISOString().replace('T', ' ').slice(0, 19) + ' UTC';
