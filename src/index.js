@@ -144,6 +144,13 @@ async function main() {
     console.log(`  仅生成：${config.only}`);
   }
 
+  // 6. 如果指定了 --only html，只生成 index.html
+  if (config.only === 'html') {
+    const { generateIndex } = require('./generate-index');
+    generateIndex();
+    return;
+  }
+
   const allData = {};
   const apiBase = getHolidayApiBase();
   if (apiBase !== 'https://timor.tech/api/holiday/year') {
