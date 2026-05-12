@@ -60,13 +60,6 @@ jobs:
       - name: Disable Jekyll (skip HTML processing)
         run: touch output/.nojekyll
 
-      - name: Enable GitHub Pages
-        run: |
-          gh api -X PUT /repos/${{ github.repository }}/pages \
-            -f build_type=workflow
-          echo "Waiting for Pages API to propagate..."
-          sleep 10
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
         continue-on-error: true
