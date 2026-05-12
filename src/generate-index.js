@@ -16,7 +16,10 @@ const timestamp = process.argv[5] || new Date().toISOString().replace('T', ' ').
 const repoFullName = `${repoOwner}/${repoName}`;
 const repoUrl = `https://${repoOwner}.github.io/${repoName}`;
 
-const html = `<!DOCTYPE html>
+const html = `---
+layout: null
+---
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -257,7 +260,10 @@ function generateIndex() {
   const repoUrl = `https://${repoOwner}.github.io/${repoName}`;
   const outputDir = path.join(__dirname, '..', 'output');
   
-  const html = `<!DOCTYPE html>
+  const html = `---
+layout: null
+---
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
