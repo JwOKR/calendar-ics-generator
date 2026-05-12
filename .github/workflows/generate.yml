@@ -68,6 +68,8 @@ jobs:
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://api.github.com/repos/${{ github.repository }}/pages \
             -d '{"build_type": "workflow"}'
+          echo "Waiting for Pages API to propagate..."
+          sleep 10
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
